@@ -1,65 +1,38 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Rajat
-  Date: 10/12/2019
-  Time: 16:40
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Contact V2</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<form action="formsubmited">
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <p>Your Name</p>
-        </div>
+
+    <link rel="stylesheet" type="text/css" href="css/contactcss.css">
+
+</head>
+<%----%>
+<body>
+<jsp:include page="header.jsp" />
+<form action="formsubmited" >
+
+
+    <div class="container">
+        <label ><b>Name</b></label>
+        <input type="text" placeholder="Enter name" name="name" required>
+
+        <label ><b>Phone Number</b></label>
+        <input type="text" placeholder="Enter Phone Number" name="number" required>
+
+        <label ><b>Email Address</b></label>
+        <input type="text" placeholder="Enter Email Address" name="address" required>
+
+        <label ><b>Message</b></label>
+        <input type="text" placeholder="Enter Your Message" name="message" required>
+
+        <input type="submit" value="Submit" class="bttn">
+
     </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <input type="text" name="name" />
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <p>Your Mobile Number</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <input type="number" name="number" />
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <p>Email Address</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <input type="text" name="address" />
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <p>Message</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <input type="text" name="message" />
-        </div>
-    </div>
-</div>
-<input type= submit value="Submit" class="btn">
+
+
 </form>
 </body>
 </html>

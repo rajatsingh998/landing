@@ -9,6 +9,7 @@
     <link rel="stylesheet"  href="css/landingpage.css" >
 </head>
 <body>
+<%@page  import = "static com.constant.Constant.*" %>
 <jsp:include page="header.jsp" />
 
 <%--    <div ><img class="image1"src="https://res.cloudinary.com/finzy/image/upload/v1491394379/logoWeb1x_1_thzngg.png"></div>--%>
@@ -44,13 +45,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3 textline2">
-                        Loan Amount
+                       <%= LOAN_AMOUNT %>
                     </div>
                     <div class="col-sm-3 textline2">
-                        Loan Purpose
+                        <%= LOAN_PURPOSE%>
                     </div>
                     <div class="col-sm-3 textline2">
-                        Tenure
+                        <%=TENURE%>
                     </div>
                 </div>
                 <div class="row">
@@ -68,25 +69,25 @@
 
         </div>
         <div class="positioning1">
-            <img class="image4" src="https://finzy.com/assets/images/finzy_rbi_badge.png">
+            <img class="image4" src= <%=RBI_BADGE_IMAGE%> >
         </div>
         <div class="container-fluid ">
             <div class="row">
-                <div class="col-sm-12 positioning2">Quick personal loans. Low intereset rates.
+                <div class="col-sm-12 positioning2"><%=QUICK_LOANS%>
                 </div>
             </div>
         </div>
-        <img class="image3" src="https://res.cloudinary.com/finzy/image/upload/Final1_oogh7d" />
+        <img class="image3" src=<%=BACKGROUND_IMAGE%> />
     </div>
 </div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <p class=" text11">How finzy works</p></div>
+            <p class=" text11"><%=FINZY_WORK%></p></div>
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <p class="text12">finzy connects personal loan borrowers with investors</p></div>
+            <p class="text12"><%=FINZY_COUSTOMERS%></p></div>
     </div>
 </div>
 
@@ -95,10 +96,10 @@
     <div class="row">
         <% for(IconCardEnum i : IconCardEnum.values()) {%>
         <div class="col-sm-4">
-            <div class="card" class="okkk" >
+            <div class="card myClass" >
                 <img class="card-img-top" src=<%= i.image%>>
                 <div class="card-body">
-                    <p class="card-text"><%= i.text%>></p>
+                    <p class="card-text1"><%= i.text%>></p>
                 </div>
             </div>
         </div>
@@ -109,11 +110,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <p class="text21">What do I need to do for a Personal Loan</p></div>
+            <p class="text21"><%=PERSONAL_LOAN%></p></div>
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <p class="text22">finzy makes entire borrowing process simple and user friendly <br> You can get your loan funded in as little as 48 hours</p></div>
+            <p class="text22"><%=FINZY_PROCESS%></p></div>
     </div>
 </div>
 
@@ -121,26 +122,27 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <img src="https://res.cloudinary.com/finzy/image/upload/v1498288560/borrower_2div_ghvugv.png">
+            <img src= <%=FINZY_PROCESS_IMAGE%> />
         </div>
-    </div></div>
+    </div>
+</div>
 
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <p class="text31">The Core Team</p></div>
+            <p class="text31"><%=CORE_TEAM%></p>
+        </div>
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <p class="text32">The founding team of Finzy are professionals who have excelled in their fields ranging across <br>finance, technology, product, sales, marketing and leadership.</p></div>
+            <p class="text32"><%=CORE_TEAM_TEXT1%> <br> <%=CORE_TEAM_TEXT2%></p>
+        </div>
     </div>
 </div>
 
 <div class="container">
     <div class="row">
-
         <%for (Card1enum i: Card1enum.values() ){%>
-
         <div class="col-sm-3">
             <div class="card" >
                 <img class="card-img-top card-image1" src=<%= i.image%> >
@@ -148,9 +150,7 @@
                     <h5 class="card-title"><%= i.name%></h5>
                     <p class="card-text"><%= i.about %></p>
                 </div>
-
             </div>
-
         </div>
         <% }%>
     </div>
@@ -160,54 +160,55 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-41">
-            <p class="text11">Do you have a question or feedback?</p>
+            <p class="text11"><%=ANY_QUESTION%></p>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <p>Your Name</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <input type="text" />
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <p>Your Mobile Number</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <input type="number" />
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <p>Email Address</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <input type="text" />
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <p>Message</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <input type="text" />
-        </div>
-    </div>
-</div>
-<input type= submit value="Submit" class="btn">
+
+<%--<div class="container">--%>
+<%--    <div class="row">--%>
+<%--        <div class="col-sm-12">--%>
+<%--            <p>Your Name</p>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--    <div class="row">--%>
+<%--        <div class="col-sm-12">--%>
+<%--            <input type="text" />--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--    <div class="row">--%>
+<%--        <div class="col-sm-12">--%>
+<%--            <p>Your Mobile Number</p>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--    <div class="row">--%>
+<%--        <div class="col-sm-12">--%>
+<%--            <input type="number" />--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--    <div class="row">--%>
+<%--        <div class="col-sm-12">--%>
+<%--            <p>Email Address</p>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--    <div class="row">--%>
+<%--        <div class="col-sm-12">--%>
+<%--            <input type="text" />--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--    <div class="row">--%>
+<%--        <div class="col-sm-12">--%>
+<%--            <p>Message</p>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--    <div class="row">--%>
+<%--        <div class="col-sm-12">--%>
+<%--            <input type="text" />--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--</div>--%>
+<%--<input type= submit value="Submit" class="btn">--%>
 
 </body>
 </html>

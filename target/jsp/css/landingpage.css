@@ -61,6 +61,11 @@ div.okk{
 
 
 }
+div.myClass{
+    margin-left: 20%;
+    margin-top: 1%;
+    width: 25%;
+}
 div.textline{
     margin-left: 3%;
     margin-top: 1%;
