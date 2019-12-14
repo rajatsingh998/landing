@@ -1,4 +1,5 @@
 <%@ page import="Enums.Card1enum" %>
+<%@ page import="Enums.IconCardEnum" %>
 <html>
 <head>
     <title>$Title$</title>
@@ -92,30 +93,16 @@
 
 <div class="container-fluid">
     <div class="row">
+        <% for(IconCardEnum i : IconCardEnum.values()) {%>
         <div class="col-sm-4">
             <div class="card" class="okkk" >
-                <img class="card-img-top" src="https://res.cloudinary.com/finzy/image/upload/v1496830327/Group_4_kendsi.png" alt="Card image cap">
+                <img class="card-img-top" src=<%= i.image%>>
                 <div class="card-body">
-                    <p class="card-text">Digitally Connect borrowers and investors</p>
+                    <p class="card-text"><%= i.text%>></p>
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="card card1" style="width: 18rem;">
-                <img class="card-img-top" src="https://res.cloudinary.com/finzy/image/upload/v1496830346/Group_3_tib7i9.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Documentation & Disbursement of Loans</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="card card1" style="width: 18rem;">
-                <img class="card-img-top" src="https://res.cloudinary.com/finzy/image/upload/v1496830393/Group_2_v5rg2k.png" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text">Automated monthly EMI collection & transfer</p>
-                </div>
-            </div>
-        </div>
+        <% } %>
     </div>
 </div>
 
@@ -151,8 +138,8 @@
 
 <div class="container">
     <div class="row">
-        <%
-        for (Card1enum i: Card1enum.values() ){%>
+
+        <%for (Card1enum i: Card1enum.values() ){%>
 
         <div class="col-sm-3">
             <div class="card" >
@@ -166,6 +153,8 @@
 
         </div>
         <% }%>
+    </div>
+</div>
 
 
 <div class="container">
