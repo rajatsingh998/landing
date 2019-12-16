@@ -21,11 +21,13 @@
 <body>
 <jsp:include page="header.jsp" />
 <br><br><br>
+<%@page  import = "static com.constant.Constant.*" %>
+<%response.setHeader("Cache-Control", "no-ache, no-store, must-revalidate");%>
 <%@ page import="UserData.forma" %>
 <%@ page import="java.util.List" %>
 <%
-    if(session.getAttribute("username")==null){
-        response.sendRedirect("login.jsp");
+    if(session.getAttribute(SESSION_USERNAME)==null){
+        response.sendRedirect(LOGIN_JSP);
     }
 %>
 <%
@@ -38,7 +40,7 @@
 
     Root<forma> user=cq.from(forma.class);
 
-    cq.multiselect(user.get("name"),user.get("number"),user.get("address"), user.get("message") );
+    cq.multiselect(user.get(NAME),user.get(PHONE_NUMBER),user.get(ADDRESS), user.get(MESSAGE) );
     CriteriaQuery<forma> select = cq.select(user);
     TypedQuery<forma> q = entityManager.createQuery(select);
     List<forma> list = q.getResultList();

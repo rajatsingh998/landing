@@ -16,6 +16,22 @@ public class Constant {
     public static final String CORE_TEAM_TEXT2="finance, technology, product, sales, marketing and leadership.";
     public static final String ANY_QUESTION="Do you have a question or feedback?";
     public static final String LOGIN_FORM="loginForm";
+    public static final String NAME="name";
+    public static final String ADDRESS="address";
+    public static final String PHONE_NUMBER="number";
+    public static final String MESSAGE="message";
+    public static final String FEEDBACK="Thank You For Your Feedback !!";
+    public static final String HOME="Home";
+    public static final String CONTACT_US="Contact us";
+    public static final String RECORD="Record display";
+    public static final String USERNAME="admin";
+    public static final String PASSWORD="123";
+    public static final String LOGIN="login";
+    public static final String LOGIN_PASSWORD="password";
+    public static final String FEEDBACK_JSP="feedback.jsp";
+    public static final String DISPLAY_JSP="display.jsp";
+    public static final String LOGIN_JSP="login.jsp";
+    public static final String SESSION_USERNAME="username";
 
 
     public static final String RBI_BADGE_IMAGE="https://finzy.com/assets/images/finzy_rbi_badge.png";

@@ -7,18 +7,21 @@ import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import static com.constant.Constant.*;
 import java.util.List;
 
 public class formsubmi extends HttpServlet {
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String name=request.getParameter("name");
-        String number=request.getParameter("number");
-        String address=request.getParameter("address");
-        String message=request.getParameter("message");
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String name=request.getParameter(NAME);
+        String number=request.getParameter(PHONE_NUMBER);
+        String address=request.getParameter(ADDRESS);
+        String message=request.getParameter(MESSAGE);
 //
         EntityManagerFactory entityManagerFactory= Persistence.createEntityManagerFactory("Form");
         EntityManager entityManager= entityManagerFactory.createEntityManager();
@@ -31,30 +34,11 @@ public class formsubmi extends HttpServlet {
         obj.setMessage(message);
         entityManager.persist(obj);
         entityManager.getTransaction().commit();
-        CriteriaBuilder cb=entityManager.getCriteriaBuilder();
-        CriteriaQuery<forma> cq=cb.createQuery(forma.class);
-
-        Root<forma> stud=cq.from(forma.class);
-
-        cq.multiselect(stud.get("name"),stud.get("number"),stud.get("address"), stud.get("message") );
-        CriteriaQuery<forma> select = cq.select(stud);
-        TypedQuery<forma> q = entityManager.createQuery(select);
-        List<forma> list = q.getResultList();
-        for(forma i: list){
-            System.out.println(i.getName());
-            System.out.println(i.getNum());
-            System.out.println(i.getAddress());
-            response.getWriter().println(i.getName());
-            response.getWriter().println(i.getNum());
-            response.getWriter().println(i.getMessage());
-            response.getWriter().println(i.getAddress());
-            response.getWriter().println("\n");
-
-        }
-
+        RequestDispatcher rd= request.getRequestDispatcher(FEEDBACK_JSP);
+        rd.forward(request,response);
         entityManagerFactory.close();
         entityManager.close();
-        response.getWriter().println("form submitted");
+
 
 
 

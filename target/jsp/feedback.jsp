@@ -1,4 +1,4 @@
-<%--
+<%@ page import="static com.constant.Constant.FEEDBACK" %><%--
   Created by IntelliJ IDEA.
   User: Rajat
   Date: 14/12/2019
@@ -8,10 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-
+    <link rel="stylesheet"  href="css/feedback.css" >
 </head>
 <body>
 <jsp:include page="header.jsp"/>
-<p class="feedback-text"> Thank You For Your Feedback !!</p>
+<% response.setHeader("Cache-Control", "no-ache, no-store, must-revalidate");
+%>
+<p class="feedback-text"> <%FEEDBACK%></p>
 </body>
 </html>

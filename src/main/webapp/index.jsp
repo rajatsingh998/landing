@@ -12,32 +12,6 @@
 <%@page  import = "static com.constant.Constant.*" %>
 <jsp:include page="header.jsp" />
 
-<%--    <div ><img class="image1"src="https://res.cloudinary.com/finzy/image/upload/v1491394379/logoWeb1x_1_thzngg.png"></div>--%>
-<%--    <div > <img class="image2" src="https://finzy.com/assets/images/badge_small.png"> NBFC-P2P--%>
-<%--        <br> Registered With Rbi</div>--%>
-
-    <!--  -->
-    <!--  -->
-
-
-
-<!-- <img class="image3" src="https://res.cloudinary.com/finzy/image/upload/Final1_oogh7d">
-
-    <div class="box1">
-        <div class="card okk">
-            <div class="card-body">
-            <div class="textline1">  Loan Amount</div>
-           <br>
-           <input type="text" class="text-line" />
-            </div>
-          </div>
-          <div class="card okk">
-              <div class="card-body">
-                This is some text within a card body.
-              </div>
-            </div>
-
-       -->
 <div id="container-fluid" class="col-sm-12">
     <div class="img-container">
         <div class="positioning">
@@ -155,60 +129,6 @@
         <% }%>
     </div>
 </div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col-sm-41">
-            <p class="text11"><%=ANY_QUESTION%></p>
-        </div>
-    </div>
-</div>
-
-
-<%--<div class="container">--%>
-<%--    <div class="row">--%>
-<%--        <div class="col-sm-12">--%>
-<%--            <p>Your Name</p>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--    <div class="row">--%>
-<%--        <div class="col-sm-12">--%>
-<%--            <input type="text" />--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--    <div class="row">--%>
-<%--        <div class="col-sm-12">--%>
-<%--            <p>Your Mobile Number</p>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--    <div class="row">--%>
-<%--        <div class="col-sm-12">--%>
-<%--            <input type="number" />--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--    <div class="row">--%>
-<%--        <div class="col-sm-12">--%>
-<%--            <p>Email Address</p>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--    <div class="row">--%>
-<%--        <div class="col-sm-12">--%>
-<%--            <input type="text" />--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--    <div class="row">--%>
-<%--        <div class="col-sm-12">--%>
-<%--            <p>Message</p>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--    <div class="row">--%>
-<%--        <div class="col-sm-12">--%>
-<%--            <input type="text" />--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</div>--%>
-<%--<input type= submit value="Submit" class="btn">--%>
 
 </body>
 </html>

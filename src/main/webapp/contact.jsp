@@ -12,7 +12,7 @@
 <%----%>
 <body>
 <jsp:include page="header.jsp" />
-<form action="formsubmited" >
+<form action="formsubmited" method="post">
 
 
     <div class="container">
