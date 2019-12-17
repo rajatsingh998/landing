@@ -22,15 +22,16 @@
 <jsp:include page="header.jsp" />
 <br><br><br>
 <%@page  import = "static com.constant.Constant.*" %>
-<%response.setHeader("Cache-Control", "no-ache, no-store, must-revalidate");%>
+
 <%@ page import="UserData.forma" %>
 <%@ page import="java.util.List" %>
 <%
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+
     if(session.getAttribute(SESSION_USERNAME)==null){
         response.sendRedirect(LOGIN_JSP);
     }
-%>
-<%
+
     EntityManagerFactory entityManagerFactory= Persistence.createEntityManagerFactory("Form");
     EntityManager entityManager= entityManagerFactory.createEntityManager();
 

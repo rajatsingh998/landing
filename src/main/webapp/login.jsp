@@ -12,14 +12,22 @@
 <body>
 <%@page  import = "static com.constant.Constant.*" %>
 <jsp:include page="header.jsp" />
-
+<% response.setHeader("Cache-Control", "no-ache, no-store, must-revalidate");
+%>
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
-            <form class="login100-form validate-form" action= <%=LOGIN_FORM%> method="post">
-					<span class="login100-form-title p-b-33">
+            <form class="login100-form validate-form" action="Display"   method="post">
+                <%  if(request.getAttribute(LOGIN_MESSAGE)!=null) { %>
+					<span class="login100-form-title p-b-33" >
+                        <p style="color: red; font-size: larger; text-align: center;">Invalid Login</p>
+					</span>
+                <% }
+                else {%>
+                <span class="login100-form-title p-b-33">
 						Account Login
 					</span>
+                <%}%>
 
                 <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
                     <input class="input100" type="text" name="login" placeholder="Username">

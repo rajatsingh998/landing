@@ -14,6 +14,15 @@
 <jsp:include page="header.jsp"/>
 <% response.setHeader("Cache-Control", "no-ache, no-store, must-revalidate");
 %>
-<p class="feedback-text"> <%FEEDBACK%></p>
+<p class="feedback-text"> <%=FEEDBACK%></p>
+<%--<%  String redirectURL = "feedback.jsp";--%>
+<%--    response.sendRedirect(redirectURL);%>--%>
 </body>
 </html>
+<%--<script>--%>
+<%--    if ( window.history.replaceState ) {--%>
+<%--        window.history.replaceState( null, null, window.location.href );--%>
+<%--    }--%>
+<%--</script>--%>
+
+

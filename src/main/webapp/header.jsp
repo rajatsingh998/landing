@@ -30,17 +30,15 @@
                     </a>
                 </li>
 
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.jsp"><%=CONTACT_US%></a>
+                    <a class="nav-link" href="contactus"><%=CONTACT_US%></a>
                 </li>
 
                 <%
-                    if(session.getAttribute("username")!=null) {%>
+                    if(session.getAttribute(SESSION_USERNAME)!=null) {%>
                 <li class="nav-item">
-                    <a class="nav-link" href="display.jsp"><%=RECORD%></a>
+                    <a class="nav-link" href="display"><%=RECORD%></a>
                 </li>
                 <% } %>
 
@@ -48,9 +46,9 @@
                 <li class="nav-item">
 
                     <%
-                        if(session.getAttribute("username")==null) {%>
-                    <form action="login.jsp">
-                    <input type=submit value="Log IN" class="btn btn-primary">
+                        if(session.getAttribute(SESSION_USERNAME)==null || request.getAttribute(LOGIN_MESSAGE)!=null) {%>
+                    <form action="Login" method="post">
+                        <input type=submit value="Log IN" class="btn btn-primary">
                     </form>
                     <% }
                     else { %>
@@ -58,7 +56,6 @@
                         <input type=submit value="Log Out" class="btn btn-primary">
                         <%}%>
                     </form>
-
                 </li>
             </ul>
         </div>

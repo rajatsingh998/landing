@@ -73,7 +73,7 @@
             <div class="card myClass" >
                 <img class="card-img-top" src=<%= i.image%>>
                 <div class="card-body">
-                    <p class="card-text1"><%= i.text%>></p>
+                    <p class="card-text1"><%= i.text%></p>
                 </div>
             </div>
         </div>
